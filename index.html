@@ -1,33 +1,50 @@
 <!doctype html>
-<html class="no-js" lang="">
-
+<html lang="sv">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Assignment 1</title>
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+  <!-- Kopplar presentation (CSS) -->
+  <link rel="stylesheet" href="style.css" />
 
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
-
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+  <!-- Kopplar interaktivitet (JS) -->
+  <script src="app.js" defer></script>
 </head>
-
 <body>
+<header class="site-header">
+  <!-- Denna kod gör så att layouten ser bättre och centrerad -->
+  <div class="container row between center">
+    <h1>Assignment 1</h1>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/app.js"></script>
+    <!-- Här under har jag knappen som växlar hemsidans tema från vit till mörkt -->
+    <button id="toggle-theme" class="btn" type="button" aria-pressed="false">Mörkt läge</button>
+  </div>
+</header>
 
+<main class="container stack">
+  <section>
+    <h2>Knapp-test</h2>
+
+    <!-- som där uppe så centrerar denna svaret på resultaten av att klicka på knappen -->
+    <div class="row gap center" style="justify-content:flex-start;">
+      <!-- Knappen som triggar JavaScript att visa aktuell tid -->
+      <button id="show-time" class="btn" type="button">Visa tid</button>
+      <!-- Här skriver JavaScript in den aktuella tiden -->
+      <span id="current-time" class="time" aria-live="polite"></span>
+    </div>
+    <!-- Denna gör att nya rader annonseras som hjälpmedel -->
+    <div id="log" class="log" aria-live="polite"></div>
+  </section>
+</main>
+
+<!-- Denna kod är området för längst nere i sidan -->
+<footer class="site-footer">
+<!-- Denna ger max layout maxbredd/centrering -->
+  <div class="container row between center">
+<!-- denna ska visa "copyright" och även årtalet -->
+    <small>© <span id="year"></span></small>
+  </div>
+</footer>
 </body>
-
 </html>
